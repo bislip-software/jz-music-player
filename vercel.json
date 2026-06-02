@@ -11,22 +11,15 @@
       "use": "@vercel/node"
     }
   ],
+  "build": {
+    "env": {
+      "CI": "false"
+    }
+  },
   "routes": [
     {
       "src": "/api/(.*)",
       "dest": "server.js"
-    },
-    {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/favicon.ico",
-      "dest": "/favicon.ico"
-    },
-    {
-      "src": "/manifest.json",
-      "dest": "/manifest.json"
     },
     {
       "src": "/(.*)",
