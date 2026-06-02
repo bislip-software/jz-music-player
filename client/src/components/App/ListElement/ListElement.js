@@ -101,7 +101,7 @@ const ListElement = ({
         <img
           src={
             albumArt !== ""
-              ? require(`../../../images/albumArts/${albumArt.albumArt}`)
+              ? `data:image/png;base64,${albumArt.albumArt}`
               : background
           }
           alt="Album Art"

@@ -11,7 +11,7 @@ const PlaylistItem = ({ albumArt: { albumArt }, title, artist }) => {
         className={classes.Image}
         src={
           albumArt !== ""
-            ? require(`../../../images/albumArts/${albumArt}`)
+            ? `data:image/png;base64,${albumArt}`
             : background
         }
         alt="Album Art"
