@@ -1,5 +1,6 @@
 const express = require("express");
 const connectDB = require("./config/db");
+const cors = require('cors');
 const path = require("path");
 const responseTime = require("response-time");
 
@@ -7,6 +8,8 @@ const app = express();
 
 //Connect DB
 connectDB();
+
+app.use(cors()); // Enable CORS for all routes
 
 //Init Middlewares
 app.use(responseTime());
