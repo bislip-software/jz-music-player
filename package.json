@@ -8,6 +8,7 @@
     "server": "nodemon server",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && npm install && CI=false npm run build",
     "vercel-build": "cd client && npm install && CI=false npm run build"
   },
   "author": "jzcodeveloper",
